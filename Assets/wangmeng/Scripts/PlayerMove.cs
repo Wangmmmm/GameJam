@@ -11,6 +11,6 @@ public class PlayerMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		transform.Translate(new Vector3(0,0.01f,0));
 	}
 }
