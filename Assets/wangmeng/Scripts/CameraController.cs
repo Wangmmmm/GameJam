@@ -18,14 +18,15 @@ public class CameraController : MonoBehaviour {
 		UpdatePosition();
 		
 	}
+	
+	void UpdateRotation()
+	{
+       Camera.main.transform.RotateAround(PlayerPos.position, Vector3.up, speed );
+	}
 	void UpdatePosition()
 	{
           Vector3 TempPos=transform.position;
 
 		  transform.position=new Vector3(TempPos.x,PlayerPos.position.y,TempPos.z);
-	}
-	void UpdateRotation()
-	{
-       Camera.main.transform.RotateAround(PlayerPos.position, Vector3.up, speed );
 	}
 }
